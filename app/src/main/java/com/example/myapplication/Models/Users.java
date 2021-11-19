@@ -60,7 +60,7 @@ public class Users {
         return userId;
     }
 
-    public void setUserId( String userId ) {
+    public void getUserId(String userId ) {
         this.userId = userId;
     }
 

@@ -3,7 +3,6 @@ package com.example.myapplication;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,7 +12,6 @@ import android.widget.Toast;
 
 import com.example.myapplication.Models.Users;
 import com.example.myapplication.databinding.ActivitySignInBinding;
-import com.firebase.ui.auth.data.model.User;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -148,7 +146,7 @@ public class SignInActivity extends AppCompatActivity {
                             Log.d("TAG", "signInWithCredential:success");
                             FirebaseUser user = mAuth.getCurrentUser();
                             Users users = new Users(  );
-                            users.setUserId( user.getUid() );
+                            users.getUserId( user.getUid() );
                             users.setUserName(user.getDisplayName());
                             users.setProfilePic( user.getPhotoUrl().toString() );
                             firebaseDatabase.getReference().child( "Users" ).child( user.getUid() ).setValue( users );
