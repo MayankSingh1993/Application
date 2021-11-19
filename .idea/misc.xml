@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/MyApplication/app/src/main/res/drawable/bg_et_message.xml" value="0.21822916666666667" />
         <entry key="..\:/MyApplication/app/src/main/res/drawable/ic_google.xml" value="0.1" />
+        <entry key="..\:/MyApplication/app/src/main/res/layout/activity_chat_detail.xml" value="0.19791666666666666" />
         <entry key="..\:/MyApplication/app/src/main/res/layout/activity_main.xml" value="0.176" />
         <entry key="..\:/MyApplication/app/src/main/res/layout/activity_sign_in.xml" value="0.19791666666666666" />
         <entry key="..\:/MyApplication/app/src/main/res/layout/activity_sign_up.xml" value="0.178125" />

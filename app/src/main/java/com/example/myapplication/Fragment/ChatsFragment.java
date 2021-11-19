@@ -38,21 +38,19 @@ public class ChatsFragment extends Fragment {
         // Inflate the layout for this fragment
         binding = FragmentChatsBinding.inflate( inflater,container,false );
         database =FirebaseDatabase.getInstance();
-        UsersAdapter adapter=new UsersAdapter( list,getContext());
-        binding.chatRecyclerView.setAdapter( adapter );
+        UsersAdapter adapter=new UsersAdapter(list,getContext());
+        binding.chatRecyclerView.setAdapter(adapter);
         LinearLayoutManager layoutManager=new LinearLayoutManager( getContext() );
-        binding.chatRecyclerView.setLayoutManager( layoutManager );
-        database.getReference().child( "Users" ).addValueEventListener( new ValueEventListener( ) {
+        binding.chatRecyclerView.setLayoutManager(layoutManager);
+        database.getReference().child("Users").addValueEventListener(new ValueEventListener(){
             @Override
             public void onDataChange( @NonNull DataSnapshot snapshot ) {
-                list.clear( );
+                list.clear();
                 for(DataSnapshot dataSnapshot:snapshot.getChildren()){
                     Users users = dataSnapshot.getValue( Users.class );
                     users.setUserId( dataSnapshot.getKey() );
-                    if(!users.getUserId().equals( FirebaseAuth.getInstance().getUid() ));
-
-
-                    list.add( users );
+                 // if(!users.getUserId().equals( FirebaseAuth.getInstance().getUid()));
+                  list.add(users);
                 }
                 adapter.notifyDataSetChanged();
             }
