@@ -36,6 +36,7 @@ public class ChatsFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+
         binding = FragmentChatsBinding.inflate(inflater, container, false);
 
         database = FirebaseDatabase.getInstance();
@@ -58,6 +59,7 @@ public class ChatsFragment extends Fragment {
                     // get the user data using realtime database userid
                     users.getUserId(dataSnapshot.getKey());
                     list.add(users);
+
 
 
 
