@@ -8,6 +8,7 @@ import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.example.myapplication.Fragment.CallsFragment;
 import com.example.myapplication.Fragment.ChatsFragment;
+import com.example.myapplication.Fragment.StatusFragment;
 
 public class FragmentsAdapter extends FragmentPagerAdapter {
     public FragmentsAdapter( @NonNull FragmentManager fm ) {
@@ -20,8 +21,8 @@ public class FragmentsAdapter extends FragmentPagerAdapter {
         switch(position)
         {
             case 0: return new ChatsFragment();
-            case 1: return  new CallsFragment();
-            case 2 : return new ChatsFragment();
+            case 1: return  new StatusFragment();
+            case 2 : return new CallsFragment();
             default : return new ChatsFragment();
         }
 
